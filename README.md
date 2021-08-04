@@ -14,3 +14,27 @@ and takes the next input frame. It predicts the next frame using the features in
 cells. In third module, to analyze the frame predicted, we compare it with the Ground Truth
 data.
 
+
+![](Next%20Frame%20Prediction/Images/1.JPG)
+
+The ConvLSTM model is split into two sections: one for reading the input sequence and
+encoding it into a fixed-length vector, and the other for decoding the fixed-length vector and
+predicting the sequence. The encoder generates a two-dimensional matrix of outputs, the
+length of which is determined by the number of memory cells in the layer. The decoder is an
+LSTM layer that expects a 3D input of [samples, time steps, features] and produces a decoded
+sequence of a length determined by the task.
+
+
+# Results
+
+This consists of the samples taken from the dataset’s each category and shows the result
+attained. The first five frames are the input frames taken from the videos segmented from the
+dataset and the sixth frame is the predicted next frame i.e. the output generated from our
+ConvLSTM model.
+
+
+![](Next%20Frame%20Prediction/Images/2.JPG)
+
+
+![](Next%20Frame%20Prediction/Images/3.JPG)
+
